@@ -9,7 +9,6 @@ Loading dataset from huggingface into Microsoft Fabric using dataset created by 
   url       = {https://huggingface.co/datasets/saheedniyi/naijaweb},
 } 
 
-This project was done as an experiment to connect hugging face data into a microsoft fabric Lakehouse using Saheed Azeez Naijaweb as a case study.
 ## Requirements
 1. A Microsoft Fabric Trail or Prolicense-https://app.fabric.microsoft.com/singleSignOn?ru=https%3A%2F%2Fapp.fabric.microsoft.com%2F%3FnoSignUpCheck%3D1
 2. An Hugging Face Account-https://huggingface.co/join
