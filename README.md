@@ -1,5 +1,5 @@
 # Naijaweb Fabric Data Engineering Project
-Loading dataset created by
+Loading dataset from huggingface into Microsoft Fabric using dataset created by Saheed Azeez as a case study.
  @dataset{naijaweb_2024,
   author    = {Saheed Azeez},
   title     = {Naijaweb: A Web Scraped Nigerian Context Dataset},
@@ -7,7 +7,7 @@ Loading dataset created by
   publisher = {Hugging Face Datasets},
   version   = {1.0.0},
   url       = {https://huggingface.co/datasets/saheedniyi/naijaweb},
-} into Microsoft Fabric.
+} 
 
 This project was done as an experiment to connect hugging face data into a microsoft fabric Lakehouse using Saheed Azeez Naijaweb as a case study.
 ## Requirements
@@ -25,12 +25,12 @@ This project was done as an experiment to connect hugging face data into a micro
 8. Login to hugging face with the code - from huggingface_hub import login login() and paste your token.
 9. Run the following code to load the dataset from hugging face in a new cell - from datasets import load_dataset dataset = load_dataset("saheedniyi/naijaweb")
 10. import pandas as pd # Convert to Pandas DataFrame (assuming the dataset has a 'train' split) df = dataset["train"].to_pandas()
-11. # Save as CSV or Parquet (Parquet is generally more efficient for larger datasets) df.to_parquet("naijaweb_data.parquet")
+11. Save as CSV or Parquet (Parquet is generally more efficient for larger datasets) df.to_parquet("naijaweb_data.parquet")
 12. Display dataframe to be show of your output display(df)
-13. # Save to the default Files section of your Lakehouse df.to_parquet("/lakehouse/default/Files/naijaweb_data.parquet")
+13. Save to the default Files section of your Lakehouse df.to_parquet("/lakehouse/default/Files/naijaweb_data.parquet")
 14. parquet_path = "Files/naijaweb_data.parquet"
-15. # Load the Parquet file from the Lakehouse Files section df_lakehouse = spark.read.parquet(parquet_path)
-16. # Replace 'naijaweb_data_table' with your desired table name df_lakehouse.write.format("delta").saveAsTable("naijaweb_data_table")
+15. Load the Parquet file from the Lakehouse Files section df_lakehouse = spark.read.parquet(parquet_path)
+16. Replace 'naijaweb_data_table' with your desired table name df_lakehouse.write.format("delta").saveAsTable("naijaweb_data_table")
 17. Once you have done that you can run your sqlendpoint to query the data
 18. A simple query would be to see based on section the count of text that comes from each section Select Count(text) As Count, section
 From naijaweb_data_table
