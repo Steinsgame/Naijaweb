@@ -10,8 +10,8 @@ Loading dataset from huggingface into Microsoft Fabric using dataset created by 
 } 
 
 ## Requirements
-1. A Microsoft Fabric Trail or Prolicense-https://app.fabric.microsoft.com/singleSignOn?ru=https%3A%2F%2Fapp.fabric.microsoft.com%2F%3FnoSignUpCheck%3D1
-2. An Hugging Face Account-https://huggingface.co/join
+1. Microsoft Fabric Trail or Prolicense-https://app.fabric.microsoft.com/singleSignOn?ru=https%3A%2F%2Fapp.fabric.microsoft.com%2F%3FnoSignUpCheck%3D1
+2. Hugging Face Account-https://huggingface.co/join
 
 ## Execution Steps
 1. Sign into your microsoft Fabric account
